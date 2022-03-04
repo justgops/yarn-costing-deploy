@@ -57,7 +57,8 @@
     "pack": "electron-builder --win",
     "dist": "yarn run build && yarn run pack",
     "rebuild": "yarn run electron-rebuild -f -w",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "install:prod": "yarn install --production=true"
   },
   "eslintConfig": {
     "extends": [
