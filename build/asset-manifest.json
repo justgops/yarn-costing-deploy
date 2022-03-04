@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f38d957.chunk.css",
+    "main.js": "/static/js/main.3e3ef303.chunk.js",
+    "main.js.map": "/static/js/main.3e3ef303.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7cd165f0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7cd165f0.js.map",
+    "static/js/2.17a9fdaa.chunk.js": "/static/js/2.17a9fdaa.chunk.js",
+    "static/js/2.17a9fdaa.chunk.js.map": "/static/js/2.17a9fdaa.chunk.js.map",
+    "static/js/3.d80c8502.chunk.js": "/static/js/3.d80c8502.chunk.js",
+    "static/js/3.d80c8502.chunk.js.map": "/static/js/3.d80c8502.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9f38d957.chunk.css.map": "/static/css/main.9f38d957.chunk.css.map",
+    "static/js/2.17a9fdaa.chunk.js.LICENSE.txt": "/static/js/2.17a9fdaa.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/mplus-1m-regular-webfont.dfebd5f4.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7cd165f0.js",
+    "static/js/2.17a9fdaa.chunk.js",
+    "static/css/main.9f38d957.chunk.css",
+    "static/js/main.3e3ef303.chunk.js"
+  ]
+}
