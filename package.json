@@ -58,7 +58,8 @@
     "dist": "yarn run build && yarn run pack",
     "rebuild": "yarn run electron-rebuild -f -w",
     "postinstall": "electron-builder install-app-deps",
-    "install:prod": "yarn install --production=true"
+    "install:prod": "yarn install --production=true",
+	"heroku-postbuild": "yarn install"
   },
   "eslintConfig": {
     "extends": [
