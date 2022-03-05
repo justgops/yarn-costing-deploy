@@ -50,7 +50,7 @@
   },
   "scripts": {
     "start": "node server",
-    "build": "cd client/ && yarn install && yarn build"
+    "build": "cd client/ && yarn install && yarn build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dist": "yarn run build && yarn run pack",
