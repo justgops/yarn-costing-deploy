@@ -5,8 +5,9 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const config = require('../config/config');
-const sequelize = new Sequelize('yarn', 'postgres', 'postgres', {
-  host: 'localhost',
+//postgres://vdmtigqqlbkhca:1248460f600c4af10ac580606f71ba2702df9c15f254727a9cb66679442094b2@ec2-54-83-21-198.compute-1.amazonaws.com:5432/de3nlpe6p2230f
+const sequelize = new Sequelize('de3nlpe6p2230f', 'vdmtigqqlbkhca', '1248460f600c4af10ac580606f71ba2702df9c15f254727a9cb66679442094b2', {
+  host: 'ec2-54-83-21-198.compute-1.amazonaws.com',
   port: 5432,
   dialect: 'postgres',
   "define": {
