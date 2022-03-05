@@ -5,7 +5,14 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const config = require('../config/config');
-const sequelize = new Sequelize(config);
+const sequelize = new Sequelize('yarn', 'postgres', 'postgres', {
+  host: 'localhost',
+  port: 5432,
+  dialect: 'postgres',
+  "define": {
+    freezeTableName: true,
+  }
+});
 const db = {};
 
 fs

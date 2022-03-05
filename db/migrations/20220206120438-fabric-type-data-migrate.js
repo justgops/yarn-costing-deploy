@@ -11,7 +11,7 @@ module.exports = {
     );
 
     let allUpdates = [];
-    let res = await queryInterface.sequelize.query('select id, data from Qualities');
+    let res = await queryInterface.sequelize.query('select id, data from "Qualities"');
     res[0].forEach(row => {
       let id = row['id'];
       let data = JSON.parse(row['data']);
@@ -28,7 +28,7 @@ module.exports = {
 
       allUpdates.push(
         queryInterface.sequelize.query(
-          `update Qualities set data='${JSON.stringify(data)}' where id=${id}`)
+          `update "Qualities" set data='${JSON.stringify(data)}' where id=${id}`)
       );
     });
     return Promise.all(allUpdates);

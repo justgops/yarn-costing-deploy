@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     let allUpdates = [];
-    let res = await queryInterface.sequelize.query('select id, data from Qualities');
+    let res = await queryInterface.sequelize.query('select id, data from "Qualities"');
     res[0].forEach(row => {
       let id = row['id'];
       let data = JSON.parse(row['data']);
@@ -12,7 +12,7 @@ module.exports = {
       delete data.notes;
       allUpdates.push(
         queryInterface.sequelize.query(
-          `update Qualities set data='${JSON.stringify(data)}', name='${name}', notes='${notes}'
+          `update "Qualities" set data='${JSON.stringify(data)}', name='${name}', notes='${notes}'
           where id=${id}`)
       );
     });
