@@ -13,7 +13,12 @@ const sequelize = new Sequelize({
   host: "ec2-54-83-21-198.compute-1.amazonaws.com",
   port: 5432,
   dialect: "postgres",
-  ssl: true
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+    }
+  }
 });
 const db = {};
 
