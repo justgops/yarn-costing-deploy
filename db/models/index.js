@@ -22,12 +22,13 @@ const config = require('../config/config');
 // ,"define": { freezeTableName: true}
 // });
 
-const sequelize = new Sequelize({
-  database: process.env.POSTGRES_DB,
-  username: process.env.POSTGRES_USER,
-  password: process.env.POSTGRES_PASSWORD,
-  host: process.env.POSTGRES_HOST,
-  port: process.env.POSTGRES_PORT,
+const sequelize = new Sequelize(process.env.DATABASE_URL,{
+  // database: process.env.POSTGRES_DB,
+  // username: process.env.POSTGRES_USER,
+  // password: process.env.POSTGRES_PASSWORD,
+  // host: process.env.POSTGRES_HOST,
+  // port: process.env.POSTGRES_PORT,
+  
   dialect: "postgres",
   dialectOptions: {
     ssl: {
