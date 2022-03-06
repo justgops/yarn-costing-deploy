@@ -12,7 +12,10 @@ const sequelize = new Sequelize({
   password: "1248460f600c4af10ac580606f71ba2702df9c15f254727a9cb66679442094b2",
   host: "ec2-54-83-21-198.compute-1.amazonaws.com",
   port: 5432,
-  dialect: "postgres"
+  dialect: "postgres",
+  ssl: {
+    rejectUnauthorized: false,
+}
 });
 const db = {};
 
