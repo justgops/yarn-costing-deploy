@@ -19,16 +19,15 @@ module.exports = (port) => {
 
   /* Routes */
   app.use(express.static(path.resolve(__dirname, 'build')));
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
   app.use('/api/qualities', require('./routers/qualities'));
   app.use('/api/misc', require('./routers/misc'));
   app.use('/api/settings', require('./routers/settings'));
   app.use('/api/agents', require('./routers/agents'));
   app.use('/api/parties', require('./routers/parties'));
   app.use('/api/sizings', require('./routers/sizings'));
+  app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
 
-  app.listen(process.env.PORT || 5000);
-  
+  app.listen(port || 8787, console.log(`App listening at http://localhost:${port}/app`));
 };
