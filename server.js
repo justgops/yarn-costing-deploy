@@ -29,5 +29,5 @@ module.exports = (port) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
-  app.listen(port || 8787, console.log(`App listening at http://localhost:${port}/app`));
+  app.listen(process.env.PORT || 5000);
 };
