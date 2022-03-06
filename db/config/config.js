@@ -16,10 +16,10 @@ if(os.platform() === 'win32') {
 !fs.existsSync(basePath) && fs.mkdirSync(basePath);
 const configDbPath = path.resolve(basePath, 'storage.mdf');
 
-module.exports = {
-    "dialect": "sqlite",
-    "storage": configDbPath,
-    "define": {
-        freezeTableName: true,
-    }
-}
+// module.exports = {
+//     "dialect": "sqlite",
+//     "storage": configDbPath,
+//     "define": {
+//         freezeTableName: true,
+//     }
+// }
