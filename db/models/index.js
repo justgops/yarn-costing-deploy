@@ -19,6 +19,7 @@ const sequelize = new Sequelize({
       rejectUnauthorized: false // <<<<<<< YOU NEED THIS
     }
   }
+,"define": { freezeTableName: true}
 });
 const db = {};
 
