@@ -2,7 +2,8 @@ var router = require('express').Router();
 const db = require('../db/models');
 
 function formatDate(dateCol, alias) {
-  return [db.sequelize.fn('strftime', '%d/%m/%Y', db.sequelize.col(dateCol)), alias ?? dateCol];
+  // return [db.sequelize.fn('strftime', '%d/%m/%Y', db.sequelize.col(dateCol)), alias ?? dateCol];
+  return [db.sequelize.fn('TO_CHAR', db.sequelize.col(dateCol),'DD/MM/YYYY'), alias ?? dateCol];
 }
 
 async function saveHistory(histRec) {
